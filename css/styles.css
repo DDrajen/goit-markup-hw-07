@@ -838,20 +838,43 @@ p {
 /* Second page PORTFOLIO */
 /*  */
 .portfolio-section {
-  padding: 96px 0 120px;
+  padding: 48px 0;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio-section {
+    padding: 64px 0 96px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .portfolio-section {
+    padding: 100px 0 120px;
+  }
 }
 .portfolio-btns {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
-  margin-bottom: 72px;
-  gap: var(--indent);
+  margin-bottom: 48px;
+  column-gap: 16px;
+  row-gap: var(--indent);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio-btns {
+    justify-content: center;
+    margin-bottom: 64px;
+    gap: var(--indent);
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .portfolio-btns {
+    margin-bottom: 72px;
+  }
 }
 .btn.portfolio {
   transition: border var(--time-animation) var(--time-allocation),
@@ -876,11 +899,19 @@ p {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio-apps {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;
   row-gap: 48px;
-  --items: 3;
+  --items: 1;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio-apps {
+    column-gap: 24px;
+    --items: 2;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .portfolio-apps {
+    --items: 3;
+  }
 }
 .portfolio-item {
   border: 1px solid var(--accent);

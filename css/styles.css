@@ -444,6 +444,11 @@ p {
 .features-title {
   margin-bottom: 8px;
 }
+@media only screen and (min-width: 768px) {
+  .features-title {
+    text-align: left;
+  }
+}
 @media only screen and (max-width: 1157px) {
   .features-title {
     font-weight: 700;
@@ -488,6 +493,7 @@ p {
   background-color: var(--light);
 }
 .team-list {
+  justify-content: center;
   gap: 72px;
 }
 @media only screen and (min-width: 768px) {
@@ -502,6 +508,7 @@ p {
   }
 }
 .team-item {
+  width: 264px;
   --items: 1;
   background-color: #ffffff;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -628,12 +635,30 @@ p {
   display: flex;
   flex-direction: column;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .footer-container {
+    width: 584px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1158px) {
   .footer-container {
     display: flex;
     flex-direction: row;
-
     align-items: baseline;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer-tablet-box {
+    display: flex;
+    column-gap: 24px;
+    margin-bottom: 72px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer-tablet-box {
+    margin: 0;
+    gap: 0;
   }
 }
 .footer-logo-container {
@@ -641,11 +666,13 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 72px;
 }
 @media only screen and (min-width: 768px) {
   .footer-logo-container {
     display: block;
-    margin-right: 24px;
+    margin: 0;
+    padding: 0;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -677,13 +704,19 @@ p {
 }
 .footer-text {
   max-width: 268px;
-  min-height: 72px;
-  margin-bottom: 72px;
 }
 @media only screen and (min-width: 768px) {
   .footer-text {
     max-width: 264px;
     margin-bottom: 0;
+  }
+}
+.footer-social-media {
+  margin-bottom: 72px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-social-media {
+    margin: 0;
   }
 }
 .footer-social-media-text {
@@ -701,7 +734,6 @@ p {
   display: flex;
   gap: 16px;
   justify-content: center;
-  margin-bottom: 72px;
 }
 @media only screen and (min-width: 1158px) {
   .footer-link {
@@ -731,10 +763,6 @@ p {
   background-color: var(--success);
 }
 /* Підписка в футері */
-@media only screen and (min-width: 768px) {
-   {
-  }
-}
 @media only screen and (min-width: 1158px) {
   .subscribe-container {
     margin-left: auto;
@@ -743,10 +771,6 @@ p {
   }
 }
 @media only screen and (min-width: 768px) {
-   {
-  }
-}
-@media only screen and (min-width: 1158px) {
   .subscribe-container > .footer-subscribe {
     display: flex;
   }
@@ -766,10 +790,6 @@ p {
   border-radius: 4px;
 }
 @media only screen and (min-width: 768px) {
-   {
-  }
-}
-@media only screen and (min-width: 1158px) {
   .footer-input {
     height: 40px;
     width: 264px;
@@ -796,12 +816,9 @@ p {
   border: none;
 }
 @media only screen and (min-width: 768px) {
-   {
-  }
-}
-@media only screen and (min-width: 1158px) {
   .footer-btn {
     display: flex;
+    margin: 0;
     align-items: center;
     height: 40px;
     padding: 8px 24px;

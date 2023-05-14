@@ -49,10 +49,13 @@ p {
   padding: 0;
   list-style: none;
 }
-.image {
+img {
   display: block;
   width: 100%;
   height: auto;
+
+  object-fit: cover;
+  object-position: center;
 }
 .btn {
   cursor: pointer;
@@ -295,22 +298,70 @@ p {
 /* Section1 HERO*/
 /*  */
 .hero {
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 112px;
   padding-bottom: 112px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: var(--white-background);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/mainpage/background/heroimage.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin-left: auto;
-  margin-right: auto;
+    url(../images/mainpage/herosection/heroimage_mob@1x.jpg);
 }
-@media only screen and (min-width: 768px) {
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mainpage/herosection/heroimage_mob@2x.jpg);
+  }
+}
+@media only screen and (min-width: 429px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mainpage/herosection/heroimage_tab@1x.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mainpage/herosection/heroimage_tab@2x.jpg);
+  }
+}
+@media only screen and (min-width: 769px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mainpage/herosection/heroimage_desk@1x.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mainpage/herosection/heroimage_desk@2x.jpg);
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -953,6 +1004,7 @@ p {
 .portfolio-title {
   min-width: 290px;
   margin-bottom: 8px;
+  text-align: left;
 }
 .portfolio-text {
   min-width: 75px;
